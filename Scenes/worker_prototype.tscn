@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bu11xxeskrfir"]
+
+[ext_resource type="Script" path="res://Scripts/worker_prototype.gd" id="1_htatg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yhker"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btuaf"]
+albedo_color = Color(1, 1, 0.439216, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_xe0ff"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xufl3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_w363l"]
+
+[node name="WorkerPrototype" type="CharacterBody3D"]
+script = ExtResource("1_htatg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00813, 0)
+mesh = SubResource("CapsuleMesh_yhker")
+surface_material_override/0 = SubResource("StandardMaterial3D_btuaf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.237878, 0.48526, -0.411922)
+mesh = SubResource("SphereMesh_xe0ff")
+surface_material_override/0 = SubResource("StandardMaterial3D_xufl3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.260498, 0.48526, -0.411922)
+mesh = SubResource("SphereMesh_xe0ff")
+surface_material_override/0 = SubResource("StandardMaterial3D_xufl3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00813, 0)
+shape = SubResource("CapsuleShape3D_w363l")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
