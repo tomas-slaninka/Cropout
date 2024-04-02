@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bai1b6iqwv8mx"]
+[gd_scene load_steps=9 format=3 uid="uid://bai1b6iqwv8mx"]
 
+[ext_resource type="Script" path="res://Scripts/Building.gd" id="1_82lck"]
 [ext_resource type="Texture2D" uid="uid://bglhw1j68aoji" path="res://Assets/SM_Monument_06_MI_Monument_SM_Monument_06_BaseColor.png" id="1_ooyrl"]
 [ext_resource type="Texture2D" uid="uid://brkllw47so5id" path="res://Assets/SM_Monument_06_MI_Monument_SM_Monument_06_MetallicRoughness.png" id="2_126dh"]
 [ext_resource type="Texture2D" uid="uid://br4jrrhkxars8" path="res://Assets/SM_Monument_06_MI_Monument_SM_Monument_06_Normal.png" id="3_vj6uo"]
@@ -52,7 +53,9 @@ shadow_mesh = SubResource("ArrayMesh_4xvme")
 [sub_resource type="BoxShape3D" id="BoxShape3D_bst45"]
 size = Vector3(8.02829, 1, 10.0135)
 
-[node name="Monument" type="StaticBody3D"]
+[node name="Monument" type="Area3D" node_paths=PackedStringArray("building_mesh")]
+script = ExtResource("1_82lck")
+building_mesh = NodePath("SM_Monument_06")
 
 [node name="SM_Monument_06" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_0fvus")
@@ -61,3 +64,8 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.62939e-05, 0.61756, -0.154457)
 shape = SubResource("BoxShape3D_bst45")
+
+[connection signal="area_entered" from="." to="." method="_on_object_body_entered"]
+[connection signal="area_exited" from="." to="." method="_on_object_body_exited"]
+[connection signal="body_entered" from="." to="." method="_on_object_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_object_body_exited"]

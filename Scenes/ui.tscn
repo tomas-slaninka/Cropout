@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://dehytok7f0yku"]
+
+[ext_resource type="Texture2D" uid="uid://dso3mppmmuskc" path="res://Assets/Images/T_Rsrc_Food_DA.PNG" id="1_nvgc0"]
+[ext_resource type="Texture2D" uid="uid://bdfmdpr4ofxae" path="res://Assets/Images/T_Rsrc_Stone_DA.PNG" id="2_u1xxi"]
+[ext_resource type="Texture2D" uid="uid://cpldp6hnb61pu" path="res://Assets/Images/T_Rsrc_Wood_DA.PNG" id="3_sdogh"]
+[ext_resource type="Texture2D" uid="uid://bwgwi5gr40ydl" path="res://Assets/Images/T_Crop_Corn_DA.PNG" id="4_maroc"]
+[ext_resource type="Texture2D" uid="uid://bki1p0yfiol2j" path="res://Assets/Images/T_Crop_Lettuce_DA.PNG" id="5_25g71"]
+[ext_resource type="Texture2D" uid="uid://ba2awnxji2e52" path="res://Assets/Images/T_Crop_Pumpkin_DA.PNG" id="6_sxpnj"]
+[ext_resource type="Texture2D" uid="uid://crm0ghpghi2yq" path="res://Assets/Images/T_Crop_Wheat_DA.PNG" id="7_jy7nl"]
+[ext_resource type="Texture2D" uid="uid://dnuia1rop3vhh" path="res://Assets/Images/T_House_DA.PNG" id="8_76oba"]
+[ext_resource type="Texture2D" uid="uid://bka5eifdcvujy" path="res://Assets/Images/T_Monument_DA.PNG" id="9_k00rf"]
+[ext_resource type="Texture2D" uid="uid://co7wpuqaayele" path="res://Assets/Images/T_Shrub_DA.PNG" id="10_0eons"]
+[ext_resource type="Texture2D" uid="uid://bwiotiq4232sy" path="res://Assets/Images/T_Tree_DA.PNG" id="11_8iho8"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_nvgc0")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "123"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_u1xxi")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "123"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("3_sdogh")
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "123"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 560.0
+offset_right = 1140.0
+offset_bottom = 647.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_maroc")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_25g71")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_sxpnj")
+expand_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_jy7nl")
+expand_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_76oba")
+expand_mode = 3
+
+[node name="TextureRect6" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_k00rf")
+expand_mode = 3
+
+[node name="TextureRect7" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_0eons")
+expand_mode = 3
+
+[node name="TextureRect8" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("11_8iho8")
+expand_mode = 3
